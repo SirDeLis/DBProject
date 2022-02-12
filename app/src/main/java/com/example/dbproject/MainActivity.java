@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        toStoreBtn = findViewById(R.id.toStoreBtn);
+        toStoreBtn.setOnClickListener(this);
+        toDBBtn = findViewById(R.id.toDBBtn);
+        toDBBtn.setOnClickListener(this);
+
         mainLayout = findViewById(R.id.mainLayout);
 
         dbName = findViewById(R.id.dbName);
@@ -44,10 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dbClear = findViewById(R.id.dbClear);
         dbClear.setOnClickListener(this);
 
-        toStoreBtn = findViewById(R.id.toStoreBtn);
-        toStoreBtn.setOnClickListener(this);
-        toDBBtn = findViewById(R.id.toDBBtn);
-        toDBBtn.setOnClickListener(this);
 
         dbHelper = new DBHelper(this);
         database= dbHelper.getWritableDatabase();
