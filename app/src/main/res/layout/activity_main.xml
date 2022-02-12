@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/dbName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="name"
+        android:hint="@string/name"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/dbPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dbPrice"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/price"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dbName"
+        app:layout_constraintTop_toTopOf="@+id/dbName" />
+
+        <Button
+            android:id="@+id/dbAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/addToDB"
+            app:layout_constraintEnd_toStartOf="@+id/dbClear"
+            app:layout_constraintStart_toStartOf="@id/dbName"
+            app:layout_constraintTop_toBottomOf="@+id/dbName" />
+
+        <Button
+            android:id="@+id/dbClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/clearDB"
+            app:layout_constraintEnd_toEndOf="@id/dbPrice"
+            app:layout_constraintStart_toEndOf="@+id/dbAdd"
+            app:layout_constraintTop_toBottomOf="@id/dbPrice" />
+
+    <TableLayout
+        android:id="@+id/dbOutput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/menuBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dbAdd" />
+
+    <LinearLayout
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dbOutput">
+
+        <Button
+            android:id="@+id/toDBBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/nav_1"
+            android:textColor="#3F51B5" />
+
+        <Button
+            android:id="@+id/toStoreBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/nav_2"
+            android:textColor="#3F51B5" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

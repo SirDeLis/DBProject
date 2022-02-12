@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DBProject</string>
+    <string name="buy">Buy</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="addToDB">ADD TO DB</string>
+    <string name="clearDB">CLEAR DB</string>
+    <string name="nav_1">TO DB</string>
+    <string name="nav_2">TO STORE</string>
+    <string name="price_symbol"> р.</string>
+</resources>
